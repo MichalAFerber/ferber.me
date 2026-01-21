@@ -49,3 +49,10 @@ exclude:
 # Plugins
 plugins:
   - jekyll-seo-tag
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

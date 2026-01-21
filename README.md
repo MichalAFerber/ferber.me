@@ -1,5 +1,7 @@
 # The Ferber Family Website
 
+![Ferber Family Crest](https://raw.githubusercontent.com/MichalAFerber/ferber.me/main/assets/images/ferber_crest.jpg)
+
 A family history website for the Ferber family, built with Jekyll and the [Just the Docs](https://just-the-docs.com/) theme.
 
 ## 🌐 Live Site
@@ -42,12 +44,12 @@ ferber.me/
 ├── history.md           # Family history page
 ├── photos.md            # Photo gallery
 ├── assets/
+│   └── docs/            # Site documents
 │   └── images/          # Site images
 │       └── gallery01/   # Family photos
 ├── .github/
 │   └── workflows/
 │       └── pages.yml    # GitHub Pages deployment
-└── Old_Website/         # Previous Carrd website (archived)
 ```
 
 ## 🎨 Theme
