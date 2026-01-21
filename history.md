@@ -27,6 +27,4 @@ Source: [http://houseofnames.com/Ferber-family-crest/](http://houseofnames.com/F
   
 For detailed information about the Ferber surname history, view the comprehensive PDF document below:
 
-<iframe src="https://docs.google.com/viewer?url=https://michalferber.me/assets/docs/Ferber_Germany_History.pdf&embedded=true" width="100%" height="600" style="border: 1px solid var(--landing-border); border-radius: 4px;"></iframe>
-  
-<p style="margin-top: 1rem;"><a href="https://michalferber.me/assets/docs/Ferber_Germany_History.pdf" class="btn-landing" target="_blank">📄 Open PDF in New Tab</a></p>
+<iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://michalferber.me/assets/docs/Ferber_Germany_History.pdf" width="100%" height="600" style="border: 1px solid var(--landing-border); border-radius: 4px;" allowfullscreen></iframe>
