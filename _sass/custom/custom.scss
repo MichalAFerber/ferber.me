@@ -7,17 +7,7 @@
   --landing-accent: #e6a756;
   --landing-accent-hover: #d4913d;
   --landing-border: #eaeaea;
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --landing-bg: #1a1a2e;
-    --landing-text: #eaeaea;
-    --landing-accent: #e6a756;
-    --landing-accent-hover: #d4913d;
-    --landing-border: #2d3436;
-  }
+  color-scheme: light only;
 }
 
 /* ===== Base Layout ===== */

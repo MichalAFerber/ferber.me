@@ -21,7 +21,7 @@ Spelling variations of this family name include:
   
 > Fearber, Farber, Ferber, Farbman, Fariarz, Farbiasz, Farbstein, Farbszstein, Ferver, Ferfers, Farberson, Farbersohn and many more.
   
-Source: [http://houseofnames.com/Ferber-family-crest/](http://houseofnames.com/Ferber-family-crest/)</a>
+Source: [http://houseofnames.com/Ferber-family-crest/](http://houseofnames.com/Ferber-family-crest/)
 
 ## Ferber Surname History
   
