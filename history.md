@@ -26,6 +26,6 @@ In their later history the name became a power unto themselves and were elevated
   
 For detailed information about the Ferber surname history, view the comprehensive PDF document below:
 
-<iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://ferber.me/assets/docs/Ferber_Germany_History.pdf" width="100%" height="600" style="border: 1px solid var(--landing-border); border-radius: 4px;" allowfullscreen></iframe>
+<iframe src="/assets/pdfjs/web/viewer.html?file=/assets/docs/Ferber_Germany_History.pdf" width="100%" height="600" style="border: 1px solid var(--landing-border); border-radius: 4px;" allowfullscreen></iframe>
 
 Source: [http://houseofnames.com/Ferber-family-crest/](http://houseofnames.com/Ferber-family-crest/)
