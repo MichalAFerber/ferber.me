@@ -1,0 +1,18 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+    {% unless page.sitemap == false %}
+      {% if page.url != '/404.html' and page.url != '/robots.txt' %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>{% if page.url == '/' %}1.0{% elsif page.url contains 'history' or page.url contains 'photos' %}0.8{% else %}0.5{% endif %}</priority>
+  </url>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</urlset>

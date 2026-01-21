@@ -1,0 +1,10 @@
+/* TEAM */
+Creator: Michal Ferber
+Site: https://michalferber.me
+Location: United States
+
+/* SITE */
+Last update: 2026/01/20
+Standards: HTML5, CSS3, JavaScript
+Components: Jekyll, Just the Docs theme
+Software: VS Code, GitHub Pages

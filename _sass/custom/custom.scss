@@ -1,0 +1,429 @@
+/* Landing-style theme customization for Just the Docs */
+
+/* ===== CSS Variables ===== */
+:root {
+  --landing-bg: #ffffff;
+  --landing-text: #2d3436;
+  --landing-accent: #e6a756;
+  --landing-accent-hover: #d4913d;
+  --landing-border: #eaeaea;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --landing-bg: #1a1a2e;
+    --landing-text: #eaeaea;
+    --landing-accent: #e6a756;
+    --landing-accent-hover: #d4913d;
+    --landing-border: #2d3436;
+  }
+}
+
+/* ===== Base Layout ===== */
+body {
+  background: var(--landing-bg);
+  color: var(--landing-text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide default Just the Docs elements */
+.side-bar,
+.site-nav,
+.site-header,
+.site-footer,
+.search,
+.breadcrumb-nav,
+.site-title {
+  display: none !important;
+}
+
+.main {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+.main-content-wrap {
+  padding: 0 !important;
+}
+
+.main-content {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Two Column Layout ===== */
+.landing-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== Sidebar Navigation ===== */
+.landing-sidebar {
+  width: 280px;
+  padding: 3rem 2rem;
+  text-align: center;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--landing-bg);
+  border-right: 1px solid var(--landing-border);
+}
+
+.landing-sidebar .sidebar-avatar {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.landing-sidebar .sidebar-pronunciation {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.landing-sidebar .sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--landing-text);
+}
+
+.landing-sidebar .sidebar-social {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  justify-content: center;
+}
+
+.landing-sidebar .sidebar-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--landing-accent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.landing-sidebar .sidebar-social a:hover {
+  color: var(--landing-accent-hover);
+}
+
+.landing-sidebar .sidebar-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.landing-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.landing-sidebar nav a {
+  color: var(--landing-accent);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.landing-sidebar nav a:hover {
+  background: rgba(230, 167, 86, 0.1);
+  color: var(--landing-accent-hover);
+}
+
+.landing-sidebar nav a.active {
+  background: var(--landing-accent);
+  color: white;
+}
+
+/* ===== Main Content Area ===== */
+.landing-main {
+  flex: 1;
+  margin-left: 280px;
+  max-width: 800px;
+  padding: 3rem 2rem;
+  min-height: 100vh;
+}
+
+/* ===== Content Sections ===== */
+.landing-section {
+  margin: 2.5rem 0;
+}
+
+.landing-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--landing-text);
+}
+
+.landing-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--landing-accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.landing-section p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.landing-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Flag/crest image styling */
+.flag-image {
+  max-width: 200px;
+  margin: 0 0 1.5rem;
+  display: block;
+}
+
+/* ===== Photo Gallery - Masonry ===== */
+.photo-gallery {
+  column-count: 4;
+  column-gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.photo-gallery .gallery-item {
+  break-inside: avoid;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-gallery .gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Lightbox ===== */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10000;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+.lightbox-counter {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* ===== Buttons ===== */
+.btn-landing {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  background: var(--landing-accent);
+  color: white !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-landing:hover {
+  background: var(--landing-accent-hover);
+  text-decoration: none;
+}
+
+/* ===== Footer ===== */
+.landing-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--landing-border);
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.landing-footer a {
+  color: var(--landing-accent);
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--landing-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--landing-accent-hover);
+}
+
+/* ===== Blockquote styling ===== */
+blockquote {
+  background: #f9f9f9;
+  border-left: 4px solid var(--landing-accent);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  color: #555;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .photo-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-layout {
+    flex-direction: column;
+  }
+
+  .landing-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 2rem 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--landing-border);
+  }
+
+  .landing-sidebar .sidebar-avatar {
+    width: 80px;
+  }
+
+  .landing-sidebar .sidebar-title {
+    font-size: 1.25rem;
+  }
+
+  .landing-sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .landing-sidebar nav a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .landing-main {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .photo-gallery {
+    column-count: 2;
+  }
+}
+
+.icon-heart { background-image: url(https://assets.michalferber.me/svg/heart.svg); background-size: contain; background-repeat: no-repeat; display: inline-block; width: 20px; height: 20px; }

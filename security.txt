@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /.well-known/security.txt
+---
+# Security Policy for ferber.me
+
+Contact: mailto:contact@ferber.me
+Preferred-Languages: en
+Canonical: https://ferber.me/.well-known/security.txt

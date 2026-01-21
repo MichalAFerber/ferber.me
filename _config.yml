@@ -1,0 +1,51 @@
+title: The Ferber Family
+description: The family of Michal Ferber
+url: https://ferber.me
+baseurl: ""
+
+# Theme settings - use gem for local, remote_theme for GitHub Pages
+theme: just-the-docs
+# remote_theme: just-the-docs/just-the-docs
+
+# Color scheme (light, dark, or custom)
+color_scheme: light
+
+# Disable default navigation elements for landing page style
+nav_enabled: false
+search_enabled: false
+
+# Favicon
+favicon_ico: "/assets/images/favicon.png"
+
+# Disable footer and other UI elements (we use custom ones)
+footer_content: ""
+gh_edit_link: false
+back_to_top: false
+heading_anchors: false
+
+# Collections for pages
+collections:
+  history:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from processing
+exclude:
+  - Old_Website/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - node_modules/
+  - vendor/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
